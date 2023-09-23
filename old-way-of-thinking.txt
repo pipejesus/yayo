@@ -1,0 +1,23 @@
+	//landoStruct["config"].(map[interface{}]interface{})["php"] = phpVersion
+	//landoStruct["config"].(map[interface{}]interface{})["database"] = dbVersion
+	//
+	//for k, v := range landoStruct {
+	//	switch v.(type) {
+	//	case string:
+	//		fmt.Println("Key : ", k, " holds a string as value")
+	//
+	//	default:
+	//		if k == "config" {
+	//		}
+	//		fmt.Println("Key : ", k, " holds array or sth")
+	//	}
+	//
+	//	if k == "name" {
+	//		landoStruct[k] = projectName
+	//	}
+	//}
+
+		if err != nil {
+    		Helpers.CustomErrorPrefix().Printfln(err.Error())
+    		os.Exit(0)
+    	}
