@@ -3,7 +3,6 @@ module yayo
 go 1.21
 
 require (
-	github.com/charmbracelet/glamour v0.6.0
 	github.com/charmbracelet/lipgloss v0.8.0
 	github.com/go-yaml/yaml v2.1.0+incompatible
 	github.com/icza/dyno v0.0.0-20230330125955-09f820a8d9c0
