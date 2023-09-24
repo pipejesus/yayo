@@ -26,5 +26,26 @@ func DownloadStarter(inputsCollector *InputsCollector.Collector) {
 		os.Exit(0)
 	}
 
+	err = os.Chdir(folderName)
+
+	if err != nil {
+		spinnerInfo.Fail("Nie mogę przejść do folderu ze starterem")
+		os.Exit(0)
+	}
+
+	err = Helpers.OsCommand("rm", []string{"-rf", ".git"}, false)
+
+	if err != nil {
+		spinnerInfo.Fail("Nie mogę wyczyścić folderu ze starterem")
+		os.Exit(0)
+	}
+
+	err = os.Chdir("..")
+
+	if err != nil {
+		spinnerInfo.Fail("Nie mogę wrócić do folderu nadrzędnego!")
+		os.Exit(0)
+	}
+
 	spinnerInfo.Info("Ok, ściągnięte!")
 }
